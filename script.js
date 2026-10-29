@@ -6,7 +6,17 @@ function generateMessage() {
         return;
     }
 
-    const result = "Generated message:\n\n" + input;
+    const resultBox = document.createElement("div");
 
-    alert(result);
+    resultBox.innerHTML = `
+        <h2>Generated Message</h2>
+        <p>${input}</p>
+    `;
+
+    resultBox.style.marginTop = "20px";
+    resultBox.style.padding = "20px";
+    resultBox.style.background = "white";
+    resultBox.style.borderRadius = "10px";
+
+    document.body.appendChild(resultBox);
 }
