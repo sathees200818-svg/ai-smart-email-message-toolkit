@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AI Smart Email & Message Writing Toolkit</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,16 +14,41 @@
 
     <h1>AI Smart Email & Message Writing Toolkit</h1>
 
+    <div class="badge">✨ AI Writing Assistant</div>
+
     <p>Write smarter emails and messages with AI.</p>
 
-    <textarea placeholder="Enter what you want to write..."></textarea>
+    <label for="messageType">What do you want to write?</label>
+
+    <select id="messageType">
+        <option value="Email">Email</option>
+        <option value="Message">Message</option>
+    </select>
+
+    <label for="messageInput">Enter your idea:</label>
+
+    <textarea id="messageInput"
+        placeholder="Example: I want to request leave for tomorrow..."></textarea>
+
+    <label for="tone">Choose tone:</label>
+
+    <select id="tone">
+        <option value="Professional">Professional</option>
+        <option value="Friendly">Friendly</option>
+        <option value="Formal">Formal</option>
+        <option value="Casual">Casual</option>
+    </select>
 
     <br><br>
 
     <button onclick="generateMessage()">Generate</button>
+    <button onclick="clearAll()">Clear</button>
+    <button onclick="copyMessage()">Copy</button>
+
+    <div id="result"></div>
 
     <script src="script.js"></script>
 
 </body>
-</html>
 
+</html>
